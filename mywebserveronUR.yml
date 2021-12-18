@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: mywebservers
   become: yes
   tasks: 
   - name: i want to install webserver on ubuntu 16 nodes
@@ -12,16 +12,15 @@
        name: "{{mywebpackageonubuntu}}"
        state: started
     when: ansible_os_family =="Debian"
-  - name: i want to install webserver on Redhatnode
+
+  - name: i want to install webserver on Redhat node
     yum: 
       name: "{{mywebpackageonredhat}}"
       state: present
     when: ansible_os_family =="RedHat"
-  - name: i want to start webserver on RedHatnode
+  - name: i want to start webserver on RedHat node
     service: 
        name: "{{mywebpackageonredhat}}"
        state: started
     when: ansible_os_family =="RedHat"
-
-
-    
+        
