@@ -2,3 +2,10 @@ mywebservers
 172.31.0.102
 172.31.30.139
 172.31.7.72
+mywebservers
+172.31.0.102
+172.31.30.139
+172.31.7.72
+[mywebservers:vars]
+mywebpackageonubuntu=apache2
+mywebpackageonredhat=httpd
