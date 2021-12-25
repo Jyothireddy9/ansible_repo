@@ -4,7 +4,7 @@
   tasks: 
   - name: install java on ubuntu 16 nodes
     apt:
-      name: "{{myjavaonubuntu}}"
+      name: 
       state: present
     when: ansible_os_family =="Debian"
 
